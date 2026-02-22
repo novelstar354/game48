@@ -392,7 +392,13 @@ function restart() {
 if (!loadState()) {
     grid = Array.from({ length: 9 }, () => Array(9).fill(0));
 }
-
+    
+document.addEventListener('keydown', e => {
+  if ( e.key.toLowerCase() === 'r') {
+    restart();
+  }
+});
+    
 createBoard();
 generateChoices();
 updateBoard();
