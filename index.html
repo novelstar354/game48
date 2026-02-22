@@ -156,13 +156,13 @@ const shapes = [
 ];
 
 function saveState() {
-    localStorage.setItem("neon9x9State", JSON.stringify({
+    localStorage.setItem("neon9x9State2", JSON.stringify({
         grid, score, currentChoices, highScore
     }));
 }
 
 function loadState() {
-    let data = localStorage.getItem("neon9x9State");
+    let data = localStorage.getItem("neon9x9State2");
     if (!data) return false;
     let parsed = JSON.parse(data);
     grid = parsed.grid;
@@ -385,7 +385,7 @@ function clearLines() {
 }
 
 function restart() {
-    localStorage.removeItem("neon9x9State");
+    localStorage.removeItem("neon9x9State2");
     location.reload();
 }
 
